@@ -52,9 +52,13 @@ A pictorial representation of the same is shown in the image below-
 
 Some instructions and their opcodes is as follows:
 (opcode is the portion of a machine language instruction that specifies the operation to be performed.)
+
 R type:
+
 R-type instructions follow the format:
+
 | funct7 (7 bits) | rs2 (5 bits) | rs1 (5 bits) | funct3 (3 bits) | rd (5 bits) | opcode (7 bits) |
+
 1.ADD r6, r2, r1
 funct7 = 0000000
 rs2    = 00001
@@ -135,7 +139,10 @@ opcode = 0110011
 32-bit: 0000000 00010 00001 001 01111 0110011
 
 I-type Instructions
-I-type instructions have the format: | imm[11:0] (12 bits) | rs1 (5 bits) | funct3 (3 bits) | rd (5 bits) | opcode (7 bits) |
+
+I-type instructions have the format:
+
+| imm[11:0] (12 bits) | rs1 (5 bits) | funct3 (3 bits) | rd (5 bits) | opcode (7 bits) |
 
 
 1.ADDI r12, r4, 5
@@ -157,7 +164,10 @@ opcode = 0000011
 32-bit: 000000000010 00001 010 01101 0000011
 
 S-type Instructions
-S-type instructions have the format: | imm[11:5] (7 bits) | rs2 (5 bits) | rs1 (5 bits) | funct3 (3 bits) | imm[4:0] (5 bits) | opcode (7 bits) |
+
+S-type instructions have the format: 
+
+| imm[11:5] (7 bits) | rs2 (5 bits) | rs1 (5 bits) | funct3 (3 bits) | imm[4:0] (5 bits) | opcode (7 bits) |
 
 1.SW r3, r1, 2
 
@@ -170,7 +180,10 @@ opcode    = 0100011
 32-bit: 0000000 00011 00001 010 00010 0100011
 
 B-type Instructions
-B-type instructions have the format: | imm[12] (1 bit) | imm[10:5] (6 bits) | rs2 (5 bits) | rs1 (5 bits) | funct3 (3 bits) | imm[4:1] (4 bits) | imm[11] (1 bit) | opcode (7 bits) |
+
+B-type instructions have the format:
+
+| imm[12] (1 bit) | imm[10:5] (6 bits) | rs2 (5 bits) | rs1 (5 bits) | funct3 (3 bits) | imm[4:1] (4 bits) | imm[11] (1 bit) | opcode (7 bits) |
 
 
 1.BNE r0, r1, 20
