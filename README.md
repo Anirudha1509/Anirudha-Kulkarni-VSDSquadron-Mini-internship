@@ -1,7 +1,7 @@
 # Anirudha-Kulkarni-VSDSquadron-Mini-internship
 
 Task 1
-task: To install RISC-V toolchain 
+\t task: To install RISC-V toolchain 
 status: done
 
 then a c program to calculate sum of 1 to n numbers is compiled and the snapshot of the output of the code is atteched.
