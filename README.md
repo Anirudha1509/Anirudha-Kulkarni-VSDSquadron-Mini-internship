@@ -16,7 +16,8 @@ from the huge set of instructions we then search for main
 total no. of inst. under main are 15.
 
 
-Task 2
+Task 2:
+
 RISC V INSTRUCTION TYPES 
 RISC V Instructions format:
 There are 6 insrtuction types
