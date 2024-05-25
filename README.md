@@ -61,11 +61,17 @@ R-type instructions follow the format:
 
 1.ADD r6, r2, r1
 funct7 = 0000000
+
 rs2    = 00001
+
 rs1    = 00010
+
 funct3 = 000
+
 rd     = 00110
+
 opcode = 0110011
+
 32 bit: 0000000 00001 00010 000 00110 0110011
 
 2.SUB r7, r1, r2
