@@ -301,9 +301,15 @@ opcode     = 1100011
 
 32-bit: 000001 00000 00000 000 1111 0 1100011
 
+Task 3:
+
+Verilog waveforms
+
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/a220cbbb-77a0-4191-9942-010286f87174)
 
 
 
+will continue the same and complete by this weekend
 
 
 
