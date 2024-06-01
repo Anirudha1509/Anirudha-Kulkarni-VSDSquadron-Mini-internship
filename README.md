@@ -310,9 +310,9 @@ Functional simulation experiment using RISC-V Core Verilog netlist and testbench
 - GTKWAVE:- GTKWave is an open-source waveform viewer used for visualizing simulation results from digital circuit designs. It is commonly used in conjunction with simulation tools like Icarus Verilog.It is a fully featured GTK+ based waveform viewer for Unix and Win32, capable of displaying signal waveforms dumped in a variety of formats.
 
 to get the expected waveforms, the following commands were typed in the terminal:
-##
+'''
   sudo apt-get update
-  sudo apt install iverilog gtkwave
+  sudo apt install iverilog gtkwave '''
 
 ![Screenshot 2024-06-01 184122](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/580f391f-6879-46ec-aa82-64638fc63b0f)
 
