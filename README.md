@@ -347,6 +347,7 @@ to get the expected waveforms, the following commands were typed in the terminal
 
 - following instructions were analysed:
 following instruction are:-
+
 1.ADD r6, r2, r1
 
 2.SUB r7, r1, r2
