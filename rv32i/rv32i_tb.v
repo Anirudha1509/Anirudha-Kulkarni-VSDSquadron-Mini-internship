@@ -15,7 +15,7 @@ clk = 1'b1;
   $dumpfile ("iiitb_rv32i.vcd"); //by default vcd
   $dumpvars (0, iiitb_rv32i_tb);
   
-  #200 RN = 1'b0;
+  #5 RN = 1'b0;
   
   #300 $finish;
 
