@@ -312,6 +312,9 @@ Functional simulation experiment using RISC-V Core Verilog netlist and testbench
 to get the expected waveforms, the following commands were typed in the terminal:
     ```
     sudo apt-get update
+    
+    ```
+    ```
     sudo apt install iverilog gtkwave
     ```
 
@@ -319,19 +322,29 @@ to get the expected waveforms, the following commands were typed in the terminal
 ![Screenshot 2024-06-01 184122](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/580f391f-6879-46ec-aa82-64638fc63b0f)
 
 - clone the github repositry:
-  *$ git clone https://github.com/Anirudha1509/VSDSquadron-Mini-internship*
-  ''' $ cd VSDSquadron-Mini-internship'''
+  ```
+  $ git clone https://github.com/Anirudha1509/VSDSquadron-Mini-internship
+  ```
+  ```
+  $ cd VSDSquadron-Mini-internship
+  ```
 
   ![Screenshot 2024-06-01 184613](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/8f7a8146-c25f-4523-ab24-2725fcdf6830)
 
 - simulate and run the code
-  '''$ iverilog -o rv32i rv32i.v rv32i_tb.v'''
-  '''$ ./rv32i'''
+  ```
+  $ iverilog -o rv32i rv32i.v rv32i_tb.v
+  ```
+  ```
+  $ ./rv32i
+  ```
 
   ![Screenshot 2024-06-01 184713](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/cb3def26-8c1f-4c36-849b-d7d72c91ea8d)
 
 - to open the waveform in gtkwave
-  '''$ gtkwave ani_rv32i.vcd&'''
+  ```
+  $ gtkwave ani_rv32i.vcd&
+  ```
 
 - following instructions were analysed:
 following instruction are:-
