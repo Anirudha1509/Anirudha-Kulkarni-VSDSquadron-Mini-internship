@@ -310,11 +310,10 @@ Functional simulation experiment using RISC-V Core Verilog netlist and testbench
 - GTKWAVE:- GTKWave is an open-source waveform viewer used for visualizing simulation results from digital circuit designs. It is commonly used in conjunction with simulation tools like Icarus Verilog.It is a fully featured GTK+ based waveform viewer for Unix and Win32, capable of displaying signal waveforms dumped in a variety of formats.
 
 to get the expected waveforms, the following commands were typed in the terminal:
+    
     ```
     sudo apt-get update
     
-    ```
-    ```
     sudo apt install iverilog gtkwave
     ```
 
@@ -368,36 +367,60 @@ following instruction are:-
 
 10.BEQ r0, r0, 15
 
-'''1.ADD r6, r2, r1'''
+```
+1.ADD r6, r2, r1
+```
 <img width="464" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/6a827e6f-dc26-4579-a6a8-1be40e3ed4f5">
 
-'''2.SUB r7, r1, r2'''
+```
+2.SUB r7, r1, r2
+```
 <img width="734" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/fa8d8895-86cd-49d9-81b8-65a2b9901e53">
 
-'''3.AND r8, r1, r3'''
+```
+3.AND r8, r1, r3
+```
 <img width="513" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/2c971949-d5dc-481d-ba4a-c64befdd1b7a">
 
-'''4.OR r9, r2, r5'''
+```
+4.OR r9, r2, r5
+```
 <img width="578" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/beedc549-eebe-4986-b26b-ce8f723656f4">
 
-'''5.XOR r10, r1, r4'''
+```
+5.XOR r10, r1, r4
+```
 <img width="633" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/65374207-0df1-4bed-a5db-7ce27ddc8087">
 
-'''6.SLT r11, r2, r4'''
+```
+6.SLT r11, r2, r4
+```
 <img width="686" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/31a89ce7-ac4f-4562-8736-532cc366c9f0">
 
-'''7.ADDI r12, r4, 5'''
+```
+7.ADDI r12, r4, 5
+```
 ![Screenshot 2024-06-01 202012](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/a21603bd-f52d-454e-b329-efb9c25ef508)
 
 
-'''8.SW r3, r1, 2'''
+```
+8.SW r3, r1, 2
+```
 <img width="462" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/a0a8c569-96fd-4bb3-b28d-fd62d3a38f48">
 
-'''9.LW r13, r1, 2'''
+```
+9.LW r13, r1, 2
+```
 <img width="332" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/f3e7cccd-6415-4ab7-82a9-a1c02274658f">
 
-'''10.BEQ r0, r0, 15'''
+```
+10.BEQ r0, r0, 15
+```
 <img width="375" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/077e792c-ce7a-456d-9005-31580bfa501e">
+
+
+
+<img width="611" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/18811aba-0b3e-45c0-98e4-8ad0757eefb9">
 
 
 
