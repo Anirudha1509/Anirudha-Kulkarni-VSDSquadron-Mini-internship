@@ -423,7 +423,11 @@ following instruction are:-
 
 <img width="611" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/18811aba-0b3e-45c0-98e4-8ad0757eefb9">
 
+Task 4:
 
+To update the project overview, components required, pinout diagram through powerpoint.
+
+[Powerpoint link] (https://1drv.ms/p/s!AqLzFgI4vU8agtYK4l8yEv4oyh_s7g?e=ralosN)
 
 
 
