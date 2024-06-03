@@ -430,7 +430,16 @@ To update the project overview, components required, pinout diagram through powe
 [Powerpoint link] (https://1drv.ms/p/s!AqLzFgI4vU8agtYK4l8yEv4oyh_s7g?e=ralosN)
 
 
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/e4211d9c-f5ab-4ea3-8758-22bbef827f61)
 
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/8211927a-0691-436e-8b4e-52b10a00e74c)
 
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/7db2dfaf-8cab-401b-b192-ec24437675ce)
 
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/b744b8f2-dd00-44c7-8604-544f2a83a871)
 
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/f809cd5c-dd5b-4e94-a85f-78cce0cbf6c2)
+
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/3bda7354-d998-4aaa-acf1-79621525dca6)
+
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/2640cdae-482d-4061-9fc6-730f8c1350ad)
