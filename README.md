@@ -313,7 +313,6 @@ to get the expected waveforms, the following commands were typed in the terminal
     
     ```
     sudo apt-get update
-    
     sudo apt install iverilog gtkwave
     ```
 
