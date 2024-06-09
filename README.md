@@ -430,16 +430,161 @@ To update the project overview, components required, pinout diagram through powe
 [Powerpoint link] (https://1drv.ms/p/s!AqLzFgI4vU8agtYK4l8yEv4oyh_s7g?e=ralosN)
 
 
-![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/e4211d9c-f5ab-4ea3-8758-22bbef827f61)
+**2 Bit Multiplier**
 
-![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/8211927a-0691-436e-8b4e-52b10a00e74c)
+**Overview**
+ This project aims to design and implement a 2-bit multiplier using the VSDSquadron Mini board. A Binary Multiplier is a digital circuit used in digital electronics to multiply two binary numbers and provide the result as output. The two numbers A1A0 and B1B0 are multiplied together to produce a 4-bit output P3P2P1P0. (The maximum product term can be 3 * 3 = 9, which is 1001, a 4-bit number).
 
-![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/7db2dfaf-8cab-401b-b192-ec24437675ce)
 
-![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/b744b8f2-dd00-44c7-8604-544f2a83a871)
+ **Components Required**
+- VSDSquadron Mini Board : The main microcontroller board used for processing and logic implementation.
+- Breadboard and Jumper Wires : For building and testing the circuit.
+- LEDs : To display the product results. This project requires 4 LEDs.
+- Resistors : To limit the current to the LEDs.2.2Ohm, and 10k  resistors are used in this project.
 
-![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/f809cd5c-dd5b-4e94-a85f-78cce0cbf6c2)
+**Circuit Diagram**
 
-![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/3bda7354-d998-4aaa-acf1-79621525dca6)
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/3daf2b69-4954-4cd6-b34b-c5162860df87)
 
-![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/2640cdae-482d-4061-9fc6-730f8c1350ad)
+
+**Truth table**
+
+![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/a9766a99-fdc4-489d-8c48-2fd786ce46d5)
+
+
+**Pin Diagram**
+
+![Screenshot 2024-06-09 215230](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/1f8c6e85-0cd8-409c-bbb4-28a37b76ed1c)
+
+
+**Code for the project**
+```
+
+#include <ch32v00x.h>
+#include <debug.h>
+#include <stdio.h>
+/* Defining gate functions */
+int and (int bit1, int bit2)
+{
+int and = bit1 & bit2;
+return and;
+}
+int xor (int bit1, int bit2)
+{
+int xor = bit1 ^ bit2;
+return xor;
+}
+void GPIO_Config(void)
+{
+GPIO_InitTypeDef GPIO_InitStructure = {0};
+/* Switching ON port D and simultaneously defining pin functions */
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+GPIO_Init(GPIOD, &GPIO_InitStructure);
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+GPIO_Init(GPIOD, &GPIO_InitStructure);
+/* Switching ON port C and simultaneously defining pin functions */
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+GPIO_Init(GPIOC, &GPIO_InitStructure);
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5|GPIO_Pin_2|GPIO_Pin_1;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+GPIO_Init(GPIOC, &GPIO_InitStructure);
+}
+/* The main function responsible for execution of program */
+int main(void)
+{
+uint8_t a, b0, b1, b, d, a0, a1, x, e,g ,f, v = 0; /* Declaring variables */
+NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+SystemCoreClockUpdate();
+Delay_Init();
+GPIO_Config();
+
+while (1)
+{
+a0 = GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_3); /* Reading input values for pin D3, D4, C3, C4 */
+a1 = GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_4);
+b0 = GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_3);
+b1 = GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_4);
+a = and(a0,b0); /* P0 */
+b = and(a0,b1);
+d = and(a1,b0);
+x = xor(b,d); /* P1 */
+e = and(a1,b1);
+g = and(b,d);
+f = xor(e,g); /* P2 */
+v = and(e,g); /* P3 */
+/* P0 */
+if(a==1)
+{
+GPIO_WriteBit(GPIOD,GPIO_Pin_2,SET);
+}
+else
+{
+GPIO_WriteBit(GPIOD,GPIO_Pin_2,RESET);
+}
+/* P1 */
+if(x==1)
+{
+GPIO_WriteBit(GPIOC,GPIO_Pin_1,SET);
+}
+else
+{
+GPIO_WriteBit(GPIOC,GPIO_Pin_1,RESET);
+}
+/* P2 */
+if(f==1)
+{
+GPIO_WriteBit(GPIOC,GPIO_Pin_2,SET);
+}
+else
+{
+GPIO_WriteBit(GPIOC,GPIO_Pin_2,RESET);
+}
+/* P3 */
+if(v==1)
+{
+GPIO_WriteBit(GPIOC,GPIO_Pin_5,SET);
+}
+else
+{
+GPIO_WriteBit(GPIOC,GPIO_Pin_5,RESET);
+}
+}
+}
+
+```
+
+
+![Screenshot 2024-06-09 220445](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/d88fbc9e-e970-493b-89ed-895415c54a15)
+
+
+
+
+**Working Model**
+
+![WhatsApp Image 2024-06-09 at 10 06 27 PM](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/c54aef58-9cc2-45d3-808d-be624ff474bd)
+
+
+
+
+![WhatsApp Image 2024-06-09 at 10 06 28 PM](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/e8dae8c4-10e0-49d3-81a5-057857de21f6)
+
+
+**Demonstration**
+
+Drive link: 
+```
+https://drive.google.com/file/d/1N_kPnGqd-BCUeDQE7Ih2_IoaSFkL780I/view?usp=sharing
+
+```
+
+
+
+
+
