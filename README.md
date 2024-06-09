@@ -420,8 +420,6 @@ following instruction are:-
 
 
 
-<img width="611" alt="image" src="https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/18811aba-0b3e-45c0-98e4-8ad0757eefb9">
-
 Task 4:
 
 To update the project overview, components required, pinout diagram through powerpoint.
@@ -432,18 +430,20 @@ To update the project overview, components required, pinout diagram through powe
 **2 Bit Multiplier**
 
 **Overview**
- This project aims to design and implement a 2-bit multiplier using the VSDSquadron Mini board. A Binary Multiplier is a digital circuit used in digital electronics to multiply two binary numbers and provide the result as output. The two numbers A1A0 and B1B0 are multiplied together to produce a 4-bit output P3P2P1P0. (The maximum product term can be 3 * 3 = 9, which is 1001, a 4-bit number).
+
+This project aims to design and implement a 2-bit multiplier using the VSDSquadron Mini board. A Binary Multiplier is a digital circuit used in digital electronics to multiply two binary numbers and provide the result as output. The two numbers A1A0 and B1B0 are multiplied together to produce a 4-bit output P3P2P1P0. (The maximum product term can be 3 * 3 = 9, which is 1001, a 4-bit number).
 
 
  **Components Required**
 - VSDSquadron Mini Board : The main microcontroller board used for processing and logic implementation.
 - Breadboard and Jumper Wires : For building and testing the circuit.
 - LEDs : To display the product results. This project requires 4 LEDs.
-- Resistors : To limit the current to the LEDs.2.2Ohm, and 10k  resistors are used in this project.
+- Resistors : To limit the current to the LEDs 2.2k Ohm, and 10k  resistors are used in this project.
 
 **Circuit Diagram**
 
-![image](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/3daf2b69-4954-4cd6-b34b-c5162860df87)
+![Screenshot 2024-06-09 224948](https://github.com/Anirudha1509/VSDSquadron-Mini-internship/assets/126673141/1b9c3890-208b-437c-8839-76ea2bdf61fd)
+
 
 
 **Truth table**
